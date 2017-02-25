@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Headroom.js - Crear un menú web fixed</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		@-webkit-keyframes swingInX {
+		    0% {
+		        -webkit-transform: perspective(400px) rotateX(-90deg);
+		    }
+		    
+		    100% {
+		        -webkit-transform: perspective(400px) rotateX(0deg);
+		    }
+		}
+		@-moz-keyframes swingInX {
+		    0% {
+		        -moz-transform: perspective(400px) rotateX(-90deg);
+		    }
+
+		    100% {
+		        -moz-transform: perspective(400px) rotateX(0deg);
+		    }
+		}
+		@-o-keyframes swingInX {
+		    0% {
+		        -o-transform: perspective(400px) rotateX(-90deg);
+		    }
+		    
+		    100% {
+		        -o-transform: perspective(400px) rotateX(0deg);
+		    }
+		}
+		@keyframes swingInX {
+		    0% {
+		        transform: perspective(400px) rotateX(-90deg);
+		    }
+		    
+		    100% {
+		        transform: perspective(400px) rotateX(0deg);
+		    }
+		}
+
+		.animated.swingInX {
+		  -webkit-transform-origin: top;
+		  -moz-transform-origin: top;
+		  -ie-transform-origin: top;
+		  -o-transform-origin: top;
+		  transform-origin: top;
+		  
+		  -webkit-backface-visibility: visible !important;
+		  -webkit-animation-name: swingInX;
+		  -moz-backface-visibility: visible !important;
+		  -moz-animation-name: swingInX;
+		  -o-backface-visibility: visible !important;
+		  -o-animation-name: swingInX;
+		  backface-visibility: visible !important;
+		  animation-name: swingInX;
+		}
+
+		@-webkit-keyframes swingOutX {
+		    0% {
+		        -webkit-transform: perspective(400px) rotateX(0deg);
+		    }
+		  100% {
+		        -webkit-transform: perspective(400px) rotateX(-90deg);
+		    }
+		}
+
+		@-moz-keyframes swingOutX {
+		    0% {
+		        -moz-transform: perspective(400px) rotateX(0deg);
+		    }
+		  100% {
+		        -moz-transform: perspective(400px) rotateX(-90deg);
+		    }
+		}
+
+		@-o-keyframes swingOutX {
+		    0% {
+		        -o-transform: perspective(400px) rotateX(0deg);
+		    }
+		  100% {
+		        -o-transform: perspective(400px) rotateX(-90deg);
+		    }
+		}
+
+		@keyframes swingOutX {
+		    0% {
+		        transform: perspective(400px) rotateX(0deg);
+		    }
+		  100% {
+		        transform: perspective(400px) rotateX(-90deg);
+		    }
+		}
+
+		.animated.swingOutX {
+			-webkit-transform-origin: top;
+		  -moz-transform-origin: top;
+		  -ie-transform-origin: top;
+		  -o-transform-origin: top;
+		  transform-origin: top;
+		  
+		  -webkit-animation-name: swingOutX;
+		  -webkit-backface-visibility: visible !important;
+		  -moz-animation-name: swingOutX;
+		  -moz-backface-visibility: visible !important;
+		  -o-animation-name: swingOutX;
+		  -o-backface-visibility: visible !important;
+		  animation-name: swingOutX;
+		  backface-visibility: visible !important;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<nav class="headroom animated">
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href=" swing.html">Swing</a></li>
+				<li><a href="flip.html">Flip</a></li>
+				<li><a href="bounce.html">Bounce</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+<main>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi esse dicta consequuntur culpa alias natus, a accusantium voluptatum minus cupiditate in, corporis dolorem tempora! Nulla voluptatem enim labore quibusdam fuga.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sed odio aperiam quidem pariatur ipsam, officiis unde totam possimus fugit iste repellendus, sequi. Omnis et dolorum, assumenda, rerum quis aspernatur.
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eum ducimus architecto voluptatem vitae, voluptates, assumenda consequuntur repellat cupiditate eligendi, officiis! Reiciendis sed, repellat qui dolorum in! Officiis, suscipit nemo dolor. Eius tempora labore pariatur saepe rem, commodi nemo, vitae tempore voluptatem ratione esse ducimus! Sapiente, aut! Obcaecati nobis, ut dolores blanditiis qui quam, voluptas repellendus. Autem iste velit aut debitis unde, deleniti recusandae voluptatem quod architecto alias sequi eos quis obcaecati commodi esse blanditiis, voluptatum! Quam error harum quidem ipsam hic consectetur enim, soluta mollitia quis sit dicta suscipit reiciendis expedita similique dolore laboriosam, perferendis labore magnam numquam magni?
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt maxime tenetur, voluptates dolore distinctio. Impedit nihil laudantium doloremque molestias doloribus similique suscipit dicta, nulla quia inventore aliquid distinctio. Ipsa unde distinctio pariatur quisquam praesentium magnam nam. Commodi eaque consequuntur explicabo, iure suscipit nam incidunt numquam temporibus deleniti, nesciunt molestiae aliquid minima aperiam dolorem omnis odit quos, iste quisquam. Enim consequuntur, quasi soluta iusto minus quidem provident architecto eligendi, consequatur dolores iure blanditiis illum numquam odit voluptate cupiditate quis reiciendis. Reprehenderit numquam modi, ipsam explicabo sapiente perferendis, ullam qui rem voluptas repellendus aspernatur exercitationem porro voluptatibus, pariatur dolorum cumque eum non, quod iure libero alias laudantium sunt! Voluptatibus, quisquam quia ullam reiciendis fuga! Consequatur accusamus ad, cupiditate qui dolor rem recusandae omnis, necessitatibus at nisi accusantium minus impedit illum id delectus quae labore fugit veritatis vitae dicta vel numquam aspernatur modi. Ut cupiditate, iste nemo aliquam cumque, quod esse reprehenderit magni!
+
+	</p>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus perferendis voluptatem officiis aliquid ipsa nemo nam sapiente magnam nihil libero quo harum in corrupti, sed iusto voluptatum rerum eos maiores animi rem error! A neque nihil hic sequi laudantium nemo dolor delectus qui aperiam natus beatae odit ullam quam tempora doloribus minus molestiae sit, iure facere, error ab. Voluptatibus, dolorum.
+	</p>
+</main>
+<footer>
+  <a href="https://01luisrene.com/author/luis-rene/">01luisrene</a> &copy; 2017
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/headroom.min.js"></script>
+<script src="js/jQuery.headroom.js"></script>
+<script>
+$('.headroom').headroom({
+    'tolerance': {
+      'down' : 10,
+      'up' : 20
+    },
+    'offset' : 205,
+    'classes': {
+      'initial': 'headroom',
+      'pinned': 'swingInX',
+      'unpinned': 'swingOutX'
+    }
+  });
+	
+</script>
+</body>
+</html>

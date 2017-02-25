@@ -1,0 +1,53 @@
+body{
+ /*el margin-top es 48px para que el texto inicial no sea ocultado por el menú*/
+ margin: 68px 0 0 0;
+}
+nav{
+ background: #64A1F4;
+ padding: 15px;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ width: 100%;
+}
+nav ul{
+ list-style-type: none;
+ padding-left: 0;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+nav ul li{
+ display: inline-block;
+}
+nav ul li + li{
+ margin-left: 10px;
+}
+.headroom {
+ animation-duration:1s;
+ animation-fill-mode:both;
+ will-change: transform;
+ transition: transform 200ms linear;
+}
+
+/*================= Estilos secundarios: no prestar atención ====================*/
+
+main{
+	margin: 0 auto;
+	padding: 0 1em;
+	width: 70%;
+}
+footer{
+	background-color: #5D5A5A;
+	color: #fff;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+footer a{
+	color: #fff;
+	text-decoration: none;
+}
+footer a:hover{
+	text-decoration: underline;
+}
