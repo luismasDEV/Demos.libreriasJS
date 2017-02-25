@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vegas Background SlideShow - librería JavaScript para crear presentación de diapositivas de fondo</title>
+	<link rel="stylesheet" href="css/vegas.css">
+	<link rel="stylesheet" href="css/monokai-sublime.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Ubuntu:400,700" rel="stylesheet">
+	<style>
+		body{
+      margin: 0;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 18px;
+    }
+		code{
+      background: #C7C7C7;
+      border-radius: 3px;
+      display: inline-block;
+      padding: 3px;
+      margin-bottom: 5px;
+      line-height: 1.5;
+    }
+		h1, h2, h3, h4, h5, h6{
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+		.titulo-main{
+      font-size: 3em;
+      text-transform: uppercase;
+    }
+		.main{
+      background: #9CC5EF;
+      overflow: hidden;
+      margin-top: 100vh;
+    }
+		.contenedor, .settings{
+      background: #FFFFFF;
+      border-radius: 5px;
+      margin: 1.5em auto;
+      padding: 1em;
+      min-height: 70vh;
+      width: 80%;
+    }
+		.settings{
+      background: #FEFDBD;
+      border: 5px solid #5A5C5D;
+      min-height: 5vh;
+    }
+		.demo{
+      text-align: center;
+    }
+		.vegas_transition, .vegas_animation, #overlay{margin: 0 auto;height: 60vh;width: 80%;}
+    .big{
+      font-size: 1.5em;
+    }
+	</style>
+</head>
+<body>
+
+<main class="main">
+<section class="contenedor">
+<h1 class="demo titulo-main">Vegas Background SlideShow</h1>
+	<h2>Iniciar Vegas Background SlideShow</h2>
+	<p><a href="http://vegas.jaysalvat.com/" target="_blank">Página oficial de Vegas Background SlideShow</a>, <small>Aquí podrás encontrar la documentación oficial y más.</small></p>
+
+	<hr>
+
+	<p>
+		Ahora vamos a implementar Vegas Background SlideShow.
+	</p>
+
+	<h4>Código HTML</h4>
+
+<pre><code>&#60;html&#62;
+ &#60;head&#62;
+  &#60;meta charset="UTF-8"&#62;
+  &#60;title&#62;Vegas Background SlideShow&#60;/title&#62;
+  &#60;!--CSS Vegas Background SlideShow--&#62;
+  &#60;link rel="stylesheet" href="css/vegas.css"&#62;
+ &#60;/head&#62;
+&#60;body&#62;
+ &#60;!--jQuery importante--&#62;
+ &#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&#62;&#60;/script&#62;
+ &#60;!--Librería js Vegas Background SlideShow--&#62;
+ &#60;script src="js/vegas.min.js"&#62;&#60;/script&#62;
+ &#60;!--Código JavaScript--&#62;
+ &#60;script&#62;
+  //Con este código iniciamos Vegas Background SlideShow en la etiqueta body
+  $('body').vegas({
+   slides: [
+    { src: "fondos/fondo.jpg" },
+    { src: "fondos/fondo02.jpg" },
+    { src: "fondos/fondo03.jpg" },
+    { src: "fondos/fondo04.jpg" },
+    { src: "fondos/fondo05.jpg" }
+   ]
+  });
+&#60;/script&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+</code>
+</pre>
+</section>
+
+<section class="contenedor">
+	<h2>Transiciones</h2>
+	<p>También podemos agregar transiciones a nuestros proyectos Vegas Background SlideShow.</p>
+  <h3>Código HTML</h3>
+  <pre><code>&#60;div class="vegas_transition"&#62;&#60;/div&#62;  </code></pre>
+  <h3>Código JavaScript</h3>
+
+<pre><code>&#60;script&#62;
+  //Con este código iniciamos Vegas Background SlideShow en la etiqueta que tiene la clase .vegas_transition
+  $('.vegas_transition').vegas({
+   slides: [
+    { src: "fondos/fondo.jpg" },
+    { src: "fondos/fondo02.jpg" },
+    { src: "fondos/fondo03.jpg" },
+    { src: "fondos/fondo04.jpg" },
+    { src: "fondos/fondo05.jpg" }
+   ],
+   transition: 'zoomOut'
+  });
+&#60;/script&#62;
+</code>
+</pre>
+<p>Puedes utilizar estas diferentes transiciones que viene integrado con la librería Vegas Background SlideShow.</p>
+<code>fade</code>, <code>fade2</code>, <code>slideLeft</code>, <code>slideLeft2</code>, <code>slideRight</code>, <code>slideRight2</code>, <code>slideUp</code>, <code>slideUp2</code>, <code>slideDown</code>, <code>slideDown2</code>, <code>zoomIn</code>, <code>zoomIn2</code>, <code>zoomOut</code>, <code>zoomOut2</code>, <code>swirlLef</code>, <code>tswirlLeft2</code>, <code>swirlRight</code>, <code>swirlRight2</code>, <code>burn</code>, <code>burn2</code>, <code>blur</code>, <code>blur2</code>, <code>flash</code>, <code>flash2</code>
+
+<h2>Transiciones Aleatorias</h2>
+<p>También podemos agregar una serie de transiciones para que se ejecuten de manera aleatoria a través de un arreglo [ ].</p>
+<pre><code>&#60;script&#62;
+  $('.vegas_transition').vegas({
+   slides: [
+    { src: "fondos/fondo.jpg" },
+    { src: "fondos/fondo02.jpg" },
+    { src: "fondos/fondo03.jpg" },
+    { src: "fondos/fondo04.jpg" },
+    { src: "fondos/fondo05.jpg" }
+   ],
+   //código agregado
+   transition: [ 'fade', 'zoomOut', 'swirlLeft' ]
+  });
+&#60;/script&#62;
+</code>
+</pre>
+
+		<h2 class="demo">Demo</h2>
+		<div class="vegas_transition"></div>
+</section>
+
+	<section class="contenedor">
+		<h2>Animaciones</h2>
+	 <p>También podemos agregar animaciones a nuestros proyectos Vegas Background SlideShow.</p>
+   <h3>Código HTML</h3>
+   <pre><code>&#60;div class="vegas_animation"&#62;&#60;/div&#62; </code></pre>
+   <h3>Código JavaScript</h3>
+	<pre><code>&#60;script&#62;
+  //Con este código iniciamos Vegas Background SlideShow en la etiqueta que tiene la clase .vegas_animation
+  $('.vegas_animation').vegas({
+   slides: [
+    { src: "fondos/fondo.jpg" },
+    { src: "fondos/fondo02.jpg" },
+    { src: "fondos/fondo03.jpg" },
+    { src: "fondos/fondo04.jpg" },
+    { src: "fondos/fondo05.jpg" }
+   ],
+   animation: 'kenburns'
+  });
+&#60;/script&#62;
+</code>
+</pre>
+	<p>Puedes utilizar estas diferentes animaciones que viene integrado con la librería Vegas Background SlideShow.</p>
+<code>kenburns</code>, <code>kenburnsUp</code>, <code>kenburnsDown</code>, <code>kenburnsRight</code>, <code>kenburnsLeft</code>, <code>kenburnsUpLeft</code>, <code>kenburnsUpRight</code>, <code>kenburnsDownLeft</code>, <code>kenburnsDownRight</code>, <code>random</code>
+
+<h2>Animaciones Aleatorias</h2>
+ <p>También podemos agregar una serie de animaciones para que se ejecuten de manera aleatoria a través de un arreglo [ ].</p>
+<pre><code>&#60;script&#62;
+  $('.vegas_animation').vegas({
+   slides: [
+    { src: "fondos/fondo.jpg" },
+    { src: "fondos/fondo02.jpg" },
+    { src: "fondos/fondo03.jpg" },
+    { src: "fondos/fondo04.jpg" },
+    { src: "fondos/fondo05.jpg" }
+   ],
+   //código agregado
+   animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
+  });
+&#60;/script&#62;
+</code>
+</pre>
+	<h2 class="demo">Demo</h2>
+	<div class="vegas_animation"></div>
+</section>
+
+<section class="contenedor">
+	<h2>Superposiciones</h2>
+	<p>Puedes agregar superposiciones que vendría a ser una especie de texturas con la propiedad overlay, al activar esta propiedad se activa la clase <code>.vegas-overlay</code></p>
+
+  <p>Estas texturas son pequeñas imágenes que se encuentran en la carpeta overlay y son 9 imágenes [01.png,..,09.png].</p>
+
+  <p>Por defecto esta activado la imagen 02.png, para modificarlo solo hay que cambiar la ruta de la imagen en el archivo <code>css</code> de nombre <code>vegas.css</code></p>
+
+<pre><code>.vegas-overlay {
+    opacity: .5;
+    background: transparent url("overlays/02.png") center center repeat;
+}</code></pre>
+	<pre><code>&#60;script&#62;
+  //Con este código iniciamos Vegas Background SlideShow en la etiqueta que tiene id #overlay
+  $('#overlay').vegas({
+   slides: [
+    { src: "fondos/fondo.jpg" },
+    { src: "fondos/fondo02.jpg" },
+    { src: "fondos/fondo03.jpg" },
+    { src: "fondos/fondo04.jpg" },
+    { src: "fondos/fondo05.jpg" }
+   ],
+   overlay: true
+  });
+&#60;/script&#62;
+</code></pre>
+		<h2 class="demo">Demo</h2>
+
+		<div id="overlay"></div>
+
+</section>
+<section class="settings">
+  <p class="big">Te recomiendo visitar el siguiente enlace: <a href="http://vegas.jaysalvat.com/documentation/settings/" target="_blank">Settings - Vegas Background SlideShow</a>, aquí encontraras información interesante te recomiendo que lo leas.</p>
+</section>
+</main>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/highlight.pack.js"></script>
+	<script src="js/vegas.min.js"></script>
+	<script>
+		$('body').vegas({
+	    slides: [
+        { src: "fondos/fondo.jpg" },
+        { src: "fondos/fondo02.jpg" },
+        { src: "fondos/fondo03.jpg" },
+        { src: "fondos/fondo04.jpg" },
+        { src: "fondos/fondo05.jpg" }
+	    ],
+	    transition: 'zoomOut',
+	    overlay: true
+		});
+		$('.vegas_transition').vegas({
+	    slides: [
+        { src: "fondos/fondo.jpg" },
+        { src: "fondos/fondo02.jpg" },
+        { src: "fondos/fondo03.jpg" },
+        { src: "fondos/fondo04.jpg" },
+        { src: "fondos/fondo05.jpg" }
+	    ],
+	    transition: 'zoomOut'
+		});
+		$('.vegas_animation').vegas({
+	    slides: [
+        { src: "fondos/fondo.jpg" },
+        { src: "fondos/fondo02.jpg" },
+        { src: "fondos/fondo03.jpg" },
+        { src: "fondos/fondo04.jpg" },
+        { src: "fondos/fondo05.jpg" }
+	    ],
+	    animation: 'kenburns'
+		});		
+		$('#overlay').vegas({
+   slides: [
+    { src: "fondos/fondo.jpg" },
+    { src: "fondos/fondo02.jpg" },
+    { src: "fondos/fondo03.jpg" },
+    { src: "fondos/fondo04.jpg" },
+    { src: "fondos/fondo05.jpg" }
+   ],
+   overlay: true
+  });
+		//Colorear código
+		$(document).ready(function() {
+		  $('pre code').each(function(i, block) {
+		    hljs.highlightBlock(block);
+		  });
+		});
+	</script>
+
+</body>
+</html>
