@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <title>Fitvids.js | Mostrar Vídeos Responsive con Fitvids.js</title>
+ <style>
+  header, .contenido, footer{
+   margin: 0 auto;
+   width: 65%;
+  }
+  .fluid-width-video-wrapper{
+   margin-bottom: 30px;
+  }
+  footer{
+   text-align: center;
+  }
+ </style>
+</head>
+<body>
+ <header>
+  <h1>Mostrar Vídeos Responsive con Fitvids.js</h1>
+ </header>
+ <!-- Contenedor principal donde se mostraran los vídeos -->
+ <section class="contenido">
+  <!-- iframe copiado desde YouTube -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/HFXXcRZvQNc" frameborder="0" allowfullscreen></iframe>
+ </section>
+ <footer>
+  <b><a href="https://01luisrene.com">01luisrene</a> &copy; 2017</b>
+ </footer>
+ <!-- jQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <!-- Asegurate de descargar la librería `fitvids.js` y apuntar hacia la librería desde la etiqueta `script` -->
+ <script src="js/jquery.fitvids.js"></script>
+ <script>
+ //Función principal que almacena todas las sub funciones que se ejecutaran cuando cargue la página.
+  $(document).ready(function(){
+   // Agregue la función `fitVids()` al contenedor donde se mostrara el vídeo cualquiera sea el nombre por ejemplo .contenido, .container, .wrapper, .post, etc.
+   $(".contenido").fitVids();
+  });
+ </script>
+</body>
+</html>
