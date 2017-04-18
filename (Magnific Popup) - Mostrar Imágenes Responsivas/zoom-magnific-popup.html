@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+	<title>Mostrar Imágenes Responsivas con Magnific Popup | Zoom Popup</title>
+	<!-- Magnific Popup archivo CSS principal -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <style>
+    /* Para la animación de zoom */
+
+    .mfp-with-zoom .mfp-container,
+    .mfp-with-zoom.mfp-bg {
+      opacity: 0;
+      -webkit-backface-visibility: hidden;
+      -webkit-transition: all 0.3s ease-out; 
+      -moz-transition: all 0.3s ease-out; 
+      -o-transition: all 0.3s ease-out; 
+      transition: all 0.3s ease-out;
+    }
+
+    .mfp-with-zoom.mfp-ready .mfp-container {
+        opacity: 1;
+    }
+    .mfp-with-zoom.mfp-ready.mfp-bg {
+        opacity: 0.8;
+    }
+
+    .mfp-with-zoom.mfp-removing .mfp-container, 
+    .mfp-with-zoom.mfp-removing.mfp-bg {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+	<h2>Zoom Popup</h2>
+
+	<a class="image-popup-no-margins" href="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg">
+    <img src="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg" width="107" height="75">
+  </a>
+	
+
+	<!-- Puedes usar cualquiera de estas dos librerías jQuery 1.7.2+ o Zepto.js 1.0+ -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- Magnific Popup archivo JS principal -->
+  <script src="js/jquery.magnific-popup.min.js"></script>
+
+	<!-- Código JS importante para el correcto funcionamiento Magnific Popup-->
+	<script>
+		$(document).ready(function() {
+      
+      $('.image-popup-no-margins').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom', // Clase para eliminar el margen predeterminado de izquierda y derecha
+        image: {
+          verticalFit: true
+        },
+        zoom: {
+          enabled: true,
+          duration: 300 // No olvide cambiar la duración también en CSS
+        }
+      });
+
+		});
+	</script>
+ 	
+</body>
+</html>
